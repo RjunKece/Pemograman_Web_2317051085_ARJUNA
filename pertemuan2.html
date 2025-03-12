@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout</title>
+    <style>
+        /* Reset margin dan padding */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Ukuran penuh untuk body */
+        html, body {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Tabel utama */
+        table {
+            width: 100%;
+            height: 100vh;
+            border-collapse: collapse;
+        }
+
+        /* Style umum untuk sel */
+        th, td {
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+
+        /* Header */
+        .header {
+            background-color: #3723cb;
+            font-weight: bold;
+            height: 10vh;
+        }
+
+        /* Footer */
+        .footer {
+            background-color: #785e5e;
+            font-weight: bold;
+            height: 10vh;
+        }
+
+        /* Sidebar (Kolom Kiri) */
+        .sidebar {
+            width: 20%;
+            vertical-align: top;
+            background-color: #f0f0f0;
+        }
+
+        /* Konten Utama (Kolom Kanan) */
+        .content {
+            width: 80%;
+            background-color: #ffffff;
+        }
+
+        /* Tabel dalam Sidebar */
+        .menu-table {
+            width: 100%;
+            height: 100%;
+            border-collapse: collapse;
+        }
+
+        /* Warna menu */
+        .menu-home {
+            background-color: yellow;
+        }
+
+        .menu-profile {
+            background-color: rgb(117, 244, 48);
+        }
+
+        .menu-data {
+            background-color: rgb(7, 214, 17);
+        }
+        .kosongan{
+            width: 80% ;
+            height: 80%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <!-- Header -->
+        <tr>
+            <th colspan="2" class="header">Header</th>
+        </tr>
+
+        <!-- Isi Halaman -->
+        <tr>
+            <!-- Sidebar (Menu) -->
+            <td class="sidebar">
+                <table class="menu-table">
+                    <tr><td class="menu-home">Beranda</td></tr>
+                    <tr><td class="menu-profile">Profil</td></tr>
+                    <tr><td class="menu-data">Data</td></tr>
+                    <tr><td class="kosongan"></td></tr>
+                </table>
+            </td>
+
+            <!-- Konten Utama -->
+            <td class="content">Bagian Isi</td>
+        </tr>
+
+        <!-- Footer -->
+        <tr>
+            <th colspan="2" class="footer">Footer</th>
+        </tr>
+    </table>
+</body>
+</html>
